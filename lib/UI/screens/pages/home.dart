@@ -1,3 +1,4 @@
+import 'package:barcloud/UI/screens/views/scannerView.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_dart_scan/qr_code_dart_scan.dart';
 
@@ -12,10 +13,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: QRCodeDartScanView(
-        scanInvertedQRCode: true,
-        onCapture: (Result result) {},
-      ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => ScannerView()));
+      }),
+      body: Column(),
     );
   }
 }
