@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -10,6 +11,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: MobileScanner(
+          allowDuplicates: false,
+          onDetect: (barcode, args) {
+            final String code = barcode.rawValue ?? "";
+            debugPrint('Barcode found! $code');
+          }),
+    );
   }
 }
