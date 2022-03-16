@@ -16,7 +16,7 @@ class _ScannerViewState extends State<ScannerView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: scannerAPI.scannerCamera(onCapture: (result) {
-      openScreen(context, ResultView(result: result));
+      newScreen(context, ResultView(result: result.text));
     }));
   }
 }

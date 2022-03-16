@@ -18,12 +18,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FloatingActionButton(
               child: Icon(Icons.qr_code),
               onPressed: () {
                 openScreen(context, ScannerView());
               }),
+          SizedBox(
+            width: 8.0,
+          ),
           FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
         ],
       ),
