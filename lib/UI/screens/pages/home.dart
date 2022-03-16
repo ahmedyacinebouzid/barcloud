@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:qr_code_dart_scan/qr_code_dart_scan.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,12 +12,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MobileScanner(
-          allowDuplicates: false,
-          onDetect: (barcode, args) {
-            final String code = barcode.rawValue ?? "";
-            debugPrint('Barcode found! $code');
-          }),
+      body: QRCodeDartScanView(
+        scanInvertedQRCode: true,
+        onCapture: (Result result) {},
+      ),
     );
   }
 }
