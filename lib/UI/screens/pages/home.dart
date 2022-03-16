@@ -1,5 +1,6 @@
 import 'package:barcloud/UI/screens/views/scannerView.dart';
 import 'package:barcloud/logic/functions/navigation.dart';
+import 'package:barcloud/repository/qr_repo.dart';
 import 'package:barcloud/repository/scanner_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_dart_scan/qr_code_dart_scan.dart';
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 ScannerRepository scannerAPI = ScannerRepository();
+QrRepository qrAPI = QrRepository();
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
@@ -32,7 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
           FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
         ],
       ),
-      body: Column(),
+      body: Column(
+        children: [qrAPI.getQRImage("hello world this is my PFE", 200.0)],
+      ),
     );
   }
 }
