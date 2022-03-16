@@ -11,8 +11,10 @@ class ResultView extends StatefulWidget {
 class _ResultViewState extends State<ResultView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(widget.result),
+    return Scaffold(
+      body: Container(
+        child: Text(widget.result),
+      ),
     );
   }
 }

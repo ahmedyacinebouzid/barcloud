@@ -1,3 +1,5 @@
+import 'package:barcloud/UI/screens/pages/home.dart';
+import 'package:barcloud/logic/functions/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_dart_scan/qr_code_dart_scan.dart';
 
@@ -13,16 +15,8 @@ class ScannerView extends StatefulWidget {
 class _ScannerViewState extends State<ScannerView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: QRCodeDartScanView(
-        scanInvertedQRCode: true,
-        onCapture: (Result result) {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => ResultView(
-                    result: result.text,
-                  )));
-        },
-      ),
-    );
+    return Scaffold(body: scannerAPI.scannerCamera(onCapture: (result) {
+      openScreen(context, ResultView(result: result));
+    }));
   }
 }
