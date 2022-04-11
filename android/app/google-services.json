@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "487156801262",
+    "project_id": "pfe-qr-scanner",
+    "storage_bucket": "pfe-qr-scanner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487156801262:android:951d4aa1041b689eea1dff",
+        "android_client_info": {
+          "package_name": "com.mbh.barcloud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487156801262-ok91r2nmn1jsfjiqa3o7rgu5q85lf5qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ7nl3J1h5p5SAQAWFO9TRp3UiDK_Zhik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487156801262-ok91r2nmn1jsfjiqa3o7rgu5q85lf5qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
